@@ -1,4 +1,4 @@
-import React, { useRef, useState } from 'react';
+import React, { Component, useRef, useState } from 'react';
 import classNames from 'classnames';
 import { useTranslation } from 'react-i18next';
 import { useDispatch, useSelector } from 'react-redux';
@@ -16,6 +16,7 @@ import { getAuthenticated, selectCanEditSketch } from '../selectors/users';
 import ConnectedFileNode from './FileNode';
 import { PlusIcon } from '../../../common/icons';
 import { FileDrawer } from './Editor/MobileEditor';
+import Collection from './Searchbar/Collection';
 
 // TODO: use a generic Dropdown UI component
 
@@ -86,8 +87,9 @@ export default function SideBar() {
           onContextMenu={toggleProjectOptions}
         >
           <h3 className="sidebar__title">
-            <span>{t('Sidebar.Title')}</span>
+            <span>wassup</span>
           </h3>
+          <Collection />
           <div className="sidebar__icons">
             <button
               aria-label={t('Sidebar.ToggleARIA')}
